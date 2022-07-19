@@ -1,0 +1,18 @@
+@hostname = http://localhost:9999
+
+get {{hostname}}/addRole/ROLE_SUPPLIER
+###
+
+get {{hostname}}/addPermission/CAN_EXECUTE_FILE
+###
+
+get {{hostname}}/addRolePermissionMapping/ROLE_USER/CAN_READ_DATA
+###
+
+get {{hostname}}/addUserRoleMapping/test@gmail.com/ROLE_USER
+###
+
+get {{hostname}}/getRoles/test@gmail.com
+###
+
+# Authorization: Bearer {{token}}
